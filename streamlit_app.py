@@ -42,6 +42,6 @@ if ticker and sdate and edate:
     except Exception as e:
         print(f"An error occurred: {e}")
 elif not ticker or not sdate or not edate:
-    st.write("Please complete all fields to fetch data.")
+    st.warning("Please complete all fields to fetch data.")
 
 
