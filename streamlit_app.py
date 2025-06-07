@@ -41,7 +41,7 @@ if ticker and sdate and edate:
         st.plotly_chart(fig)
     except Exception as e:
         print(f"An error occurred: {e}")
-else:
-    st.write("Please enter a ticker symbol and dates to fetch data.")
+elif not ticker or not sdate or not edate:
+    st.write("Please complete all fields to fetch data.")
 
 
