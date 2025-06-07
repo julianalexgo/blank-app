@@ -5,5 +5,5 @@ matplotlib
 scikit-learn
 plotly
 requests
-panda_datareader
+pandas_datareader
 mplfinance
