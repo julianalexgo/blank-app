@@ -22,8 +22,8 @@ def fetch_stocks(ticker, syear, smonth, sday, eyear, emonth, eday):
 with st.form('ticker_form'):
     st.write("Enter the ticker symbol and date range to fetch stock data.")
     ticker = st.text_input("Enter the ticker symbol:", key = 'ticker_name').upper()
-    sdate = st.date_input("Select date range:", key = 'sdate', value = None, format = "MM/DD/YYYY", min_value = dt.date(1900, 1, 1), max_value = 'today')
-    edate = st.date_input("Select date range:", key = 'edate', value = None, format = "MM/DD/YYYY", min_value = sdate, max_value = 'today')
+    sdate = st.date_input("Select start date:", key = 'sdate', value = None, format = "MM/DD/YYYY", min_value = dt.date(1900, 1, 1), max_value = 'today')
+    edate = st.date_input("Select end date:", key = 'edate', value = None, format = "MM/DD/YYYY", min_value = sdate, max_value = 'today')
     submitted = st.form_submit_button("Fetch Data")
 
 #Get inputs before splitting the code
